@@ -19,6 +19,7 @@ http://localhost:8080/api/medicines
 ## Uruchomienie frontendu
 ```shell
 cd medicine-magazine-frontend
+mvn clean install
 mvn exec:java
 ```
 
