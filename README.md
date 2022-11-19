@@ -23,4 +23,4 @@ mvn exec:java
 ```
 
 ## Demo
-![Demo 1](/img/demo)
+![Demo 1](./img/demo)
