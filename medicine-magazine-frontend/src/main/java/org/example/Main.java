@@ -22,11 +22,13 @@ public class Main {
 
         JButton loadDataButton = new JButton("Wczytaj dane");
         loadDataButton.addActionListener(e -> {
+            medicines.clear();
             try {
-                medicines.clear();
-                medicines.addAll(medicineWebClient.getMedicines());
+                List<Medicine> medicinesList = medicineWebClient.getMedicines();
+                medicines.addAll(medicinesList);
                 tableModel.fireTableDataChanged();
             } catch (Exception ex) {
+                tableModel.fireTableDataChanged();
                 JOptionPane.showMessageDialog(frame, "Wystąpił błąd w czasie pobierania danych!",
                         "Wystąpił błąd!", JOptionPane.ERROR_MESSAGE);
             }
